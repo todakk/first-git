@@ -1,4 +1,11 @@
 # hello
 first repository
 
-cahnge test
+cahnge testi
+
+read me testing... 
+
+teststet commit test
+
+
+this is only for readme-edit
