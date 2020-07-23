@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS animation</title>
+
+
+    <style>
+        .ani_area {
+            /* wrap 사이즈는 스프라이트 이미지의 한 셀의 width와 height로 맟줘주세요 */
+            width: 150px;
+            height: 167px;
+
+            background: url(img/sprite_sample.png) no-repeat 0 0;
+            background-size: auto 167px;
+
+            /* 애니메이션이름 / 진행시간 / 반복여부 / 단계(이미지 숫자를 입력) */
+            animation: ani 1s infinite steps(8);
+
+            /* stpes 를 입력해야, 이미지가 셀애니메이션처럼 작동한다. (진행과정 숨기니까) - steps 설정 안할 시, 아래 주석을 풀어 츄라이 해보세요! */
+            /* animation: ani 2s infinite; */
+        }
+
+        @keyframes ani{
+            100% { 
+                background-position: -1200px 0;
+             }
+        } 
+
+
+        /* 
+        팁: 혹시나 전체 animation wrap 사이즈를 늘리고 싶다면?
+        width / height / background-size /
+        keyframes 안의 background position 모두 같은 비율로 늘려주어야 한다.
+         */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS animaition으로 gif같은 효과 내기</h1>
+        <ul>
+            <li>준비물 : 스프라이트 이미지 ( 사용한 이미지 소스 참고하기 ) </li>  
+            <li>장점 : gif보다 이미지 경계가 깔끔하게 떨어진다. (gif 가 안티앨리어싱이 안되지만, png는 되니까! ) </li>
+            <li>익스 10, 익스 11 에서도 작동된다.</li>
+        </ul>
+        
+
+        <br>
+        <br>
+        
+        <div class="ani_area">
+            <!-- 이 영역에 이미지를 background로 넣어준다. -->
+        </div>
+    </div>  
+</body>
+</html>
